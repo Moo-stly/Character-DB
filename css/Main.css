@@ -7,10 +7,6 @@ body, html {
     background-color: var(--Main-Dark);
 }
 
-::-webkit-scrollbar {
-    opacity: 0;
-}
-
 ::-moz-selection {
     background-color: transparent;
 }
