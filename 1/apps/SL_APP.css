@@ -3,7 +3,7 @@
     --Sub-Dark: #2f2b2f;
     --Secondary-Dark: #d57880;
     --Main: #ffc6d7;
-    --Secondary-Light: #b1bfe0;
+    --Secondary-Light: #c3cdea;
     --Main-Light: #eedfe3;
 }
 
@@ -87,8 +87,6 @@ b {
     color: var(--Main);
     margin: 0;
     margin-bottom: 40px;
-    -webkit-box-shadow: 0px 0 15px 13px var(--Main);
-    box-shadow: 0px 0 15px 13px var(--Main);
 }
 
 .chara_pic img {
@@ -110,8 +108,6 @@ b {
     -webkit-transition: all ease .37s;
     transition: all ease .37s;
     color: var(--Secondary-Light);
-    -webkit-box-shadow: 0 10px 10px 0 var(--Secondary-Light);
-    box-shadow: 0 10px 10px 0 var(--Secondary-Light);
 }
 
 .topic:hover {
@@ -135,23 +131,22 @@ b {
 
 .infotb {
     margin: auto;
-    width: 80%;
-    padding: 0;
-    border-spacing: 1px 5px;
+    width: 50%;
+    border-spacing: 1px 0px;
+    text-indent: 10px;
+    text-transform: capitalize;
+    overflow: hidden;
+    border-radius: 5px
 }
 
 .infotb .td1 {
     width: 100px;
-    text-indent: 10px;
     background: var(--Sub-Dark);
     color: var(--Main-Light);
-    border-radius: 10px 0 0 3px;
-    text-transform: capitalize;
+    border-radius: 10px 0 0 10px;
 }
 
 .infotb .td2 {
-    text-transform: capitalize;
-    text-indent: 10px;
     border-left: 5px double var(--Sub-Dark);
     font-family: 'Thasadith', sans-serif;
     font-weight: bold
@@ -159,6 +154,10 @@ b {
 
 .infotb tr:nth-child(even) .td2 {
     background-color: var(--Secondary-Light);
+}
+
+.infotb tr:nth-child(odd) .td2 {
+    background-color: var(--Main-Light);
 }
 
 .stats {
@@ -228,14 +227,17 @@ iframe {
     width: 50%;
     margin: auto;
     text-align: center;
-    background: var(--Sub-Dark);
-    color: var(--Main-Light);
+    background: var(--Main-Light);
+    color: var(--Sub-Dark);
+    border-radius: 3px;
 }
 
 .traits .tb {
-    background: var(--Secondary-Dark);
+    background: var(--Sub-Dark);
     font-size: 20px;
     font-family: 'Unica One', serif;
+    color: var(--Secondary-Dark);
+    border-radius: 15px 0px/35%
 }
 
 .traits td {
@@ -264,6 +266,10 @@ iframe {
     overflow: auto
 }
 
+.likes .h3 span {
+    color: var(--Secondary-Dark) !important;
+}
+
 .dislikes {
     width: 40%;
     display: inline-block;
@@ -279,8 +285,7 @@ iframe {
 .dislikes .h3 span {
     border-bottom: 2px solid var(--Main-Light);
     padding: 0 10% 0 10px;
-    color: var(--Sub-Dark);
-    -webkit-text-stroke: 1px var(--Main-Light);
+    color: var(--Secondary-Light);
 }
 
 .inventory {
@@ -290,19 +295,21 @@ iframe {
 
 .obj {
     display: inline-block;
-    border: 1px solid var(--Sub-Dark);
-    background: var(--Secondary-Dark);
+    background: var(--Sub-Dark);
+    color: var(--Secondary-Dark);
     margin: 5px;
     vertical-align: top;
     border-radius: 3px;
+    overflow: hidden
 }
 
 .obj h4 {
     font-size: 18px;
-    margin: 2px 0;
+    margin: 0;
     text-transform: capitalize;
     font-family: 'Unica One', serif;
-    line-height: 28px
+    line-height: 30px;
+    margin-bottom: -10px
 }
 
 .obj img {
