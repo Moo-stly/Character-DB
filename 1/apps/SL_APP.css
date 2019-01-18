@@ -211,13 +211,21 @@ b {
 }
 
 .vid {
-    width: 100%;
-    margin: auto;
-    text-align: center
+    border: 6px solid;
+    text-align: center;
+    width: 560;
+    height: 315;
+    margin: 10 auto;
+    background: var(--Secondary-Light);
+}
+
+iframe {
+    filter: grayscale(1);
+    mix-blend-mode: hard-light
 }
 
 .traits {
-    width: 40%;
+    width: 50%;
     margin: auto;
     text-align: center;
     background: var(--Sub-Dark);
@@ -226,6 +234,16 @@ b {
 
 .traits .tb {
     background: var(--Secondary-Dark);
+    font-size: 20px;
+    font-family: 'Unica One', serif;
+}
+
+.traits td {
+    font-family: 'Thasadith', sans-serif;
+}
+
+.traits tr:nth-child(even) {
+    background-color: rgba(180, 164, 186, 0.42);
 }
 
 .lD {
