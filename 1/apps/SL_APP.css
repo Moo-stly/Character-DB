@@ -75,7 +75,7 @@ b {
     top: 0;
     left: 0;
     position: fixed;
-    background: var(--Main-Dark);
+    background-color: var(--Main-Dark);
     overflow-y: auto;
 }
 
@@ -219,6 +219,7 @@ b {
 }
 
 iframe {
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
     mix-blend-mode: hard-light
 }
@@ -321,4 +322,16 @@ iframe {
 .snoop_dog {
     width: 100%;
     height: 100px;
+}
+
+.history {
+    text-align: center
+}
+
+a {
+    font-size: 25px;
+    color: var(--Secondary-Light);
+    background: var(--Sub-Dark);
+    padding: 3px;
+    border:
 }
