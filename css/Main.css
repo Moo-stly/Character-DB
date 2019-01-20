@@ -18,6 +18,7 @@ body, html {
 img {
     -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     -khtml-user-select: none;
     -o-user-select: none;
@@ -51,7 +52,9 @@ img {
     display: inline-block;
     width: 200px;
     height: 100%;
+    -webkit-animation: current_flex_off;
     animation: current_flex_off;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
     text-align: center;
     text-decoration: none;
@@ -59,44 +62,132 @@ img {
     color: var(--Main-Light);
     border-radius: 3px/25px;
     background-color: var(--Main);
+    -webkit-clip-path: polygon(0% 0%, calc(100% - 10px) 0%, calc(100% - 0px) 50%, calc(100% - 10px) 100%, 0% 100%);
     clip-path: polygon(0% 0%, calc(100% - 10px) 0%, calc(100% - 0px) 50%, calc(100% - 10px) 100%, 0% 100%);
 }
 
 .Awooo:hover .current_page {
+    -webkit-animation: current_flex;
     animation: current_flex;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
-@keyframes current_flex {
+@-webkit-keyframes current_flex {
     0% {
         width: 210px;
+        -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
     }
 
     10% {
         width: 230px;
+        -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
     }
 
     75% {
         width: 255px;
+        -webkit-clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
     }
 
     80% {
         width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
     }
 
     90% {
         width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
     }
 
     100% {
         width: 260px;
         margin-right: 10px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes current_flex {
+    0% {
+        width: 210px;
+        -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
+    }
+
+    10% {
+        width: 230px;
+        -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    }
+
+    75% {
+        width: 255px;
+        -webkit-clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
+    }
+
+    80% {
+        width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
+    }
+
+    90% {
+        width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
+    }
+
+    100% {
+        width: 260px;
+        margin-right: 10px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+    }
+}
+
+@-webkit-keyframes current_flex_off {
+    100% {
+        width: 210px;
+        -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
+    }
+
+    90% {
+        width: 230px;
+        -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    }
+
+    80% {
+        width: 255px;
+        -webkit-clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
+    }
+
+    75% {
+        width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
+    }
+
+    10% {
+        width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
+    }
+
+    0% {
+        width: 260px;
+        margin-right: 10px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
     }
 }
@@ -104,32 +195,38 @@ img {
 @keyframes current_flex_off {
     100% {
         width: 210px;
+        -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
     }
 
     90% {
         width: 230px;
+        -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
     }
 
     80% {
         width: 255px;
+        -webkit-clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 96% 0%, 99% 50%, 96% 100%, 0% 100%);
     }
 
     75% {
         width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 99% 0%, 100% 50%, 99% 100%, 0% 100%);
     }
 
     10% {
         width: 260px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 97% 50%, 100% 100%, 0% 100%);
     }
 
     0% {
         width: 260px;
         margin-right: 10px;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
     }
 }
@@ -139,71 +236,155 @@ img {
     width: 30px;
     height: inherit;
     margin-left: -10px;
+    -webkit-animation: Chev_flex_off;
     animation: Chev_flex_off;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
     vertical-align: top;
     pointer-events: none;
     border-radius: 5px/25px;
     background-color: var(--Main);
+    -webkit-clip-path: polygon(calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%, 10px 50%, 0% 0%);
     clip-path: polygon(calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%, 10px 50%, 0% 0%);
 }
 
 .Awooo:hover .chevron {
+    -webkit-animation: Chev_flex;
     animation: Chev_flex;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
-@keyframes Chev_flex {
+@-webkit-keyframes Chev_flex {
     0% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
     }
 
     10% {
+        -webkit-clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
         clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
     }
 
     75% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
     }
 
     80% {
+        -webkit-clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
         clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
     }
 
     90% {
+        -webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
         clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
     }
 
     100% {
         margin-right: 10px;
+        -webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+    }
+}
+
+@keyframes Chev_flex {
+    0% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+    }
+
+    10% {
+        -webkit-clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
+        clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
+    }
+
+    75% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+    }
+
+    80% {
+        -webkit-clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
+        clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
+    }
+
+    90% {
+        -webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+        clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    }
+
+    100% {
+        margin-right: 10px;
+        -webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+    }
+}
+
+@-webkit-keyframes Chev_flex_off {
+    100% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+    }
+
+    90% {
+        -webkit-clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
+        clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
+    }
+
+    80% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
+    }
+
+    75% {
+        -webkit-clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
+        clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
+    }
+
+    10% {
+        -webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+        clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    }
+
+    0% {
+        margin-right: 10px;
+        -webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
         clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
     }
 }
 
 @keyframes Chev_flex_off {
     100% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
     }
 
     90% {
+        -webkit-clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
         clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 0% 100%, 20% 50%, 0% 0%);
     }
 
     80% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 30% 50%, 0% 0%);
     }
 
     75% {
+        -webkit-clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
         clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%, 0% 0%);
     }
 
     10% {
+        -webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
         clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
     }
 
     0% {
         margin-right: 10px;
+        -webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
         clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
     }
 }
@@ -288,7 +469,8 @@ img {
     margin: auto;
     padding: 10px;
     top: 55px;
-    left: 0
+    left: 0;
+    text-align: center;
 }
 
 /*index*/
@@ -298,41 +480,40 @@ img {
 .mel-grid {
     max-width: 100%;
     padding-bottom: 20%;
-    left: 0
-}
-
-.mel-grid:after {
-    display: block;
-    clear: both;
-    content: '';
+    left: 0;
+    text-align: center
 }
 
 .mel-grid-sizer,
 .mel-grid-item {
-    width: 200px;
+    width: 170px;
     height: 300px;
 }
 
 .mel-grid-item {
-    float: left;
+    -webkit-transition: -webkit-transform ease .37s;
+    transition: -webkit-transform ease .37s;
     transition: transform ease .37s;
+    transition: transform ease .37s, -webkit-transform ease .37s;
+    text-align: left;
 }
 
 .mel-grid-item:hover {
     z-index: 1;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 .mel-grid-item:hover .mel-item-wrapper {
+    -webkit-box-shadow: 0 0 5px 2px var(--Sub-Dark);
     box-shadow: 0 0 5px 2px var(--Sub-Dark);
 }
 
 .mel-item-wrapper {
     width: 140px;
     margin: auto;
-    padding: 15px;
+    padding: 10px;
     -webkit-transition: all .4s ease;
-    -o-transition: all .4s ease;
     transition: all .4s ease;
     border-radius: 2px;
     background: var(--Main-Light);
@@ -353,6 +534,7 @@ img {
     height: 150px;
     cursor: pointer;
     border-radius: 35px/40px 0;
+    background: -webkit-gradient(linear, right top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, var(--Main)), to(var(--Main)));
     background: linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--Main) 50%, var(--Main) 100%);
 }
 
@@ -374,10 +556,14 @@ img {
 }
 
 .Source {
-    cursor: pointer;
     text-align: center;
     color: var(--Secondary-Dark);
-    border-top: 5px double var(--Secondary-Dark);
+    border-top: 4px double var(--Secondary-Dark);
+}
+
+.Source img {
+    max-height: 40px;
+    max-width: 130px
 }
 
 .SM_Logos {
@@ -390,18 +576,18 @@ img {
 .Meta {
     font-family: 'Major Mono Display', monospace;
     font-size: 10px;
-    margin: 15px 0 -10px -10px;
     cursor: default;
-    color: var(--Main-Dark);
+    color: var(--Secondary-Light);
 }
 
 .Meta .tag {
-    padding: 1px 4px;
+    -webkit-transition: all ease .37s;
     transition: all ease .37s;
-    text-transform: uppercase;
+    text-transform: lowercase;
     opacity: .5;
-    border-radius: 12px/30px;
-    background: var(--Secondary-Light);
+    border-radius: 2px;
+    background: var(--Main-Dark);
+    padding: 2px;
 }
 
 .Meta .tag:before {
@@ -426,6 +612,7 @@ img {
 }
 
 .button {
+    position: -webkit-sticky;
     position: sticky;
     width: 50px;
     height: 50px;
@@ -466,7 +653,10 @@ img {
 /* Example for effect */
 .button .Filter_string {
     -webkit-transition: -webkit-transform .25s;
+    -webkit-transition: -webkit-transform .15s;
+    transition: -webkit-transform .15s;
     transition: transform .15s;
+    transition: transform .15s, -webkit-transform .15s;
 }
 
 .button:active .Filter_string {
