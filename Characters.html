@@ -3,11 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Character DB:: Characters</title>
+
     <link rel="icon" href="db-icon.png">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d">
     <link href="https://fonts.googleapis.com/css?family=Coiny|Comfortaa:300,700|Major+Mono+Display" rel="stylesheet">
+
     <link href="css/Darkmode.css" rel="stylesheet">
     <link href="css/Main.css" rel="stylesheet">
+
     <script src="js/TriBurst.js"></script>
     <script src="js/snap.svg-min.js"></script>
 </head>
@@ -32,47 +37,70 @@
             <div class="mel-grid-sizer"></div>
 
             <!--start-->
-            <div class="mel-grid-item DA F">
+            <div class="mel-grid-item DA">
                 <div class="mel-item-wrapper">
-                    <div class="mel-image-container"><img class="headshot" src="imgs/headshots/head_holder.png" alt="blankie"></div>
+                    <a href="1/apps/SL_APP.html">
+                        <div class="mel-image-container"><img class="headshot" src="imgs/headshots/head_holder.png" alt="blankie"></div>
+                    </a>
                     <div class="mel-content">
-                        <a class="First_Name">Yoshimi</a>
-                        <img class="SM_Logos" src="imgs/logos/DA.svg" alt="Deviantart">
-                        <a class="Last_Name">Saito</a>
+                        <a href="1/apps/SL_APP.html">
+                            <img class="SM_Logos" src="imgs/logos/DA.svg" alt="Deviantart">
+                            <p class="First_Name">Yoshimi</p>
+                            <p class="Last_Name">Saito</p>
+                        </a>
                         <div class="Source">
                             <a href="https://www.deviantart.com/seichou-live">
                                 <img src="https://a.deviantart.net/avatars/s/e/seichou-live.gif?2" alt="Seichou Live">
                             </a>
                         </div>
-                        <div class="Meta"><a class="tag">shishimi</a></div>
+                        <div class="Meta"><span class="tag">shishimi</span></div>
 
                     </div>
                 </div>
             </div><!-- Chara -->
 
+
             <!--start-->
-            <div class="mel-grid-item 1">
+            <div class="mel-grid-item open misc">
                 <div class="mel-item-wrapper">
                     <div class="mel-image-container"><img class="headshot" src="imgs/headshots/head_holder.png" alt="blankie"></div>
                     <div class="mel-content">
-                        <a class="First_Name">Blankie</a>
-                        <img class="SM_Logos" src="imgs/logos/DA.svg" alt="Deviantart">
-                        <a class="Last_Name">Facie</a>
-                        <div class="Source">My brain</div>
-                        <div class="Meta"><a class="tag">cock</a> <a class="tag">fuck</a> <a class="tag">Damn</a></div>
+
+                        <i class="material-icons SM_Logos">lock_open</i>
+
+                        <p class="First_Name">Blankie</p>
+                        <p class="Last_Name">Facie</p>
+
+                        <div class="Source">Crashdummy</div>
+
                     </div>
                 </div>
             </div><!-- Chara -->
 
+
+
             <!--start-->
-            <div class="mel-grid-item 2">
+            <div class="mel-grid-item closed misc">
                 <div class="mel-item-wrapper">
-                    <div class="mel-image-container"><img class="headshot" src="imgs/headshots/head_holder.png" alt="blankie"></div>
+
+                    <a href="1/characters/Blankie_Facie.html">
+                        <div class="mel-image-container"><img class="headshot" src="imgs/headshots/head_holder.png" alt="blankie"></div>
+                    </a>
                     <div class="mel-content">
-                        <a class="First_Name">Blankie</a>
-                        <img class="SM_Logos" src="imgs/logos/DA.svg" alt="Deviantart">
-                        <a class="Last_Name">Facie</a>
-                        <div class="Source">My brain</div>
+
+                        <i class="material-icons SM_Logos">lock</i>
+
+                        <a href="1/characters/Blankie_Facie.html">
+                            <p class="First_Name">Blankie</p>
+                            <p class="Last_Name">Facie</p>
+                        </a>
+
+                        <div class="Source">Crashdummy</div>
+
+                        <div class="Meta">
+                            <span class="tag">test</span>
+                            <span class="tag">the</span>
+                            <span class="tag">tags</span></div>
                     </div>
                 </div>
             </div><!-- Chara -->
@@ -85,74 +113,67 @@
 
     <footer class="mel-nav">
 
-        <!-button-> <button class="button mel-filter" data-filter="*">
+        <!-button-> <button title="All" class="button mel-filter all" data-filter="*">
             <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
                 <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
                     <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
                 </svg>
             </span>
-            <!-span-> <span class="Filter_string">ALL</span>
+            <!-span-> <span class="Filter_string"><i class="material-icons" alt="misc">
+                    apps
+                </i></span>
         </button>
         <!-End->
-        <!-button-> <button class="button mel-filter" data-filter=".DA">
+        <!-button-> <button title="Deviantart based" class="button mel-filter" data-filter=".DA">
             <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
                 <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
                     <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
                 </svg>
             </span>
-            <!-span-> <img class="Filter_string Filter_Icon" src="imgs/logos/DA.svg" alt="Deviantart" img>
+            <!-span-> <span class="Filter_string"><i class="socicon-deviantart" alt="Deviantart">
+
+                </i></span>
         </button>
         <!-End->
 
-        <!-button-> <button class="button mel-filter" data-filter=".misc">
+        <!-button-> <button title="misc" class="button mel-filter" data-filter=".misc">
             <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
                 <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
                     <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
                 </svg>
             </span>
-            <!-span-> <span class="Filter_string">misc</span>
+            <!-span-> <span class="Filter_string"><i class="material-icons" alt="misc">
+                    bubble_chart
+                </i></span>
         </button>
 
         <!-End->
-        <!-button-> <button class="button mel-filter" data-filter=".F">
+
+        <!-button-> <button title="closed_rp" class="button mel-filter" data-filter=".closed">
             <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
                 <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
                     <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
                 </svg>
             </span>
-            <!-span-> <span class="Filter_string">F</span>
+            <!-span-> <span class="Filter_string"><i class="material-icons">
+                    lock
+                </i></span>
         </button>
 
         <!-End->
-        <!-button-> <button class="button mel-filter" data-filter=".2">
+        <!-button-> <button title="open_rp" class="button mel-filter" data-filter=".open">
             <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
                 <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
                     <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
                 </svg>
             </span>
-            <!-span-> <span class="Filter_string">2</span>
+            <!-span-> <span class="Filter_string"><i class="material-icons" alt="open rp">
+                    lock_open
+                </i></span>
         </button>
 
         <!-End->
-        <!-button-> <button class="button mel-filter" data-filter=".3">
-            <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
-                <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
-                    <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
-                </svg>
-            </span>
-            <!-span-> <span class="Filter_string">3</span>
-        </button>
 
-        <!-End->
-        <!-button-> <button class="button mel-filter" data-filter=".4">
-            <span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">
-                <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
-                    <path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z" />
-                </svg>
-            </span>
-            <!-span-> <span class="Filter_string">4</span>
-        </button>
-        <!-End->
     </footer>
 
     <div id="Tris">

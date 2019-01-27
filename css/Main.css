@@ -15,6 +15,14 @@ body, html {
     background-color: transparent;
 }
 
+p {
+    font-family: comfortaa
+}
+
+a {
+    text-decoration: none
+}
+
 img {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -35,11 +43,12 @@ img {
     margin: 10px auto;
     border-radius: 3px/50%;
     background-color: var(--Sub-Dark);
+    display: block;
 }
 
 .Awooo {
-    display: inline;
-    height: 35px;
+    display: inline-block;
+    height: 100%;
 }
 
 .current_page:before {
@@ -234,7 +243,7 @@ img {
 .chevron {
     display: inline-block;
     width: 30px;
-    height: inherit;
+    height: 100%;
     margin-left: -10px;
     -webkit-animation: Chev_flex_off;
     animation: Chev_flex_off;
@@ -392,11 +401,10 @@ img {
 .nav_wrap {
     display: inline;
     float: right;
-    margin: 0 5%;
+    height: 100%
 }
 
 .nav_butt {
-    position: relative;
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -405,9 +413,19 @@ img {
     color: var(--Main-Dark-Main);
     border-radius: 100%;
     background-color: var(--Main);
+    vertical-align: top
 }
 
-.material-icons:hover {
+.nav_butt:active {
+    -webkit-box-shadow: inset 0 0 3px var(--Sub-Dark);
+    box-shadow: inset 1px 1px 2px var(--Sub-Dark);
+}
+
+.nav_butt .material-icons {
+    line-height: 30px;
+}
+
+.nav_butt .material-icons:hover {
     -webkit-transition: -webkit-transform ease-in-out .37s;
     transition: -webkit-transform ease-in-out .37s;
     transition: transform ease-in-out .37s;
@@ -417,21 +435,19 @@ img {
 }
 
 .arrow_box {
-    position: absolute;
-    top: 40px;
-    padding: 0 4px;
+    position: relative;
+    display: inherit;
     -webkit-transition: all ease-in .10s;
     transition: all ease-in .10s;
     border: 3px solid var(--Main-Light);
     background: var(--Secondary-Light);
-    left: 5px;
 }
 
 .arrow_box:after,
 .arrow_box:before {
     position: absolute;
     bottom: 100%;
-    left: 9px;
+    left: 15%;
     width: 0;
     height: 0;
     content: ' ';
@@ -454,11 +470,9 @@ img {
 }
 
 .nav_butt:not(:hover) .arrow_box {
-    margin-top: -40px;
     -webkit-transform: scale(.5);
     transform: scale(.5);
     opacity: 0;
-    left: 0;
 }
 
 .container {
@@ -474,7 +488,70 @@ img {
 }
 
 /*index*/
+.cutway {
+    width: 90%;
+    max-width: 800px;
+    height: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.cutway .cut {
+    width: 20%;
+    height: 100%;
+    margin: 0 10px;
+    background-color: var(--Main);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0 0 15px 15px;
+}
+
+.cut h4 {
+    color: var(--Main-Light) !important;
+}
+
 /*characters*/
+.ref_vis {
+    height: 60%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin: 40px 0
+}
+
+.base_ref img {
+    max-width: 400px;
+    max-height: 700px;
+}
+
+.base_ref {
+    height: 100%;
+    display: inline
+}
+
+.additional_L {
+    float: left;
+    margin: auto 15px
+}
+
+.additional_R {
+    float: right;
+    margin: auto 35px auto 15px
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: block;
+    background: var(--Main);
+    margin: 25px 0;
+    -webkit-box-shadow: 0 5px 4px;
+    box-shadow: 0 5px 4px;
+    border-radius: 2px;
+    line-height: 150px;
+}
+
 /* General Style */
 /* Grid Style */
 .mel-grid {
@@ -516,7 +593,9 @@ img {
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
     border-radius: 2px;
-    background: var(--Main-Light);
+    background: var(--Sub-Dark);
+    -webkit-box-shadow: 0 4px 3px;
+    box-shadow: 0 4px 3px;
 }
 
 /*ninja INFO card*/
@@ -532,7 +611,6 @@ img {
 .mel-image-container {
     width: 150px;
     height: 150px;
-    cursor: pointer;
     border-radius: 35px/40px 0;
     background: -webkit-gradient(linear, right top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, var(--Main)), to(var(--Main)));
     background: linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--Main) 50%, var(--Main) 100%);
@@ -543,16 +621,16 @@ img {
     font-size: 20px;
     font-weight: bold;
     line-height: 30px;
-    cursor: pointer;
     white-space: normal;
-    color: var(--Main-Dark);
+    color: var(--Secondary-Light);
+    margin: 0
 }
 
 .Last_Name {
     font-family: 'Comfortaa', cursive;
     margin-left: 15px;
-    cursor: pointer;
-    color: var(--Main-Dark);
+    color: var(--Secondary-Light);
+    margin: 0
 }
 
 .Source {
@@ -571,13 +649,14 @@ img {
     max-width: 20px;
     max-height: 20px;
     margin-top: 5px;
+    color: var(--Secondary-Dark)
 }
 
 .Meta {
     font-family: 'Major Mono Display', monospace;
     font-size: 10px;
     cursor: default;
-    color: var(--Secondary-Light);
+    color: var(--Sub-Dark);
 }
 
 .Meta .tag {
@@ -586,7 +665,7 @@ img {
     text-transform: lowercase;
     opacity: .5;
     border-radius: 2px;
-    background: var(--Main-Dark);
+    background: var(--Main-Light);
     padding: 2px;
 }
 
@@ -611,6 +690,11 @@ img {
     background: var(--Sub-Dark);
 }
 
+.mel-nav .all {
+    color: var(--Secondary-Light);
+    fill: var(--Secondary-Dark);
+}
+
 .button {
     position: -webkit-sticky;
     position: sticky;
@@ -624,9 +708,6 @@ img {
     outline: none;
     background: none;
     fill: var(--Secondary-Light);
-    stroke: var(--Secondary-Dark);
-    stroke-width: 14px;
-    stroke-linecap: round;
 }
 
 .morph-shape {
@@ -669,7 +750,7 @@ img {
     overflow: hidden;
     width: 85%;
     height: 200px;
-    margin: 15px auto;
+    margin: 25px auto;
     border-radius: 5px;
 }
 
@@ -678,7 +759,7 @@ img {
     width: calc(100% - 205px);
     height: 40px;
     text-indent: 30px;
-    color: var(--Main-Light);
+    color: var(--Main-Dark);
     border-right: 5px solid var(--Main-Dark);
     border-bottom: 5px solid var(--Main-Dark);
     background: var(--Main);
@@ -704,9 +785,9 @@ img {
     width: calc(100% - 205px);
     height: 160px;
     text-indent: 25px;
-    color: var(--Main-Dark);
+    color: var(--Main-Light);
     border-right: 5px solid var(--Main-Dark);
-    background: var(--Secondary-Light);
+    background: var(--Sub-Dark);
 }
 
 .summary p {
@@ -726,27 +807,53 @@ img {
     min-width: 30px;
     max-width: 70%;
     min-height: 20px;
-    margin: auto;
+    margin: 10px auto;
     padding: 5px 10px;
     text-indent: 30px;
-    color: var(--Main-Dark);
-    background: var(--Secondary-Light);
+    color: var(--Secondary-Light);
+    background: var(--Sub-Dark);
 }
 
-.info_box .pic {
-    float: right;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    background: var(--Main);
+.info_box .material-icons {
+    display: inline;
+    color: var(--Main)
 }
 
-.info_box .pic2 {
-    float: left;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    background: var(--Secondary-Dark);
+.about h2 {
+    padding: 0 10%;
+    display: inline-block;
+    background: var(--Main-Light);
+    color: var(--Sub-Dark);
+}
+
+.info {
+    margin: auto;
+    width: 70%;
+    border-spacing: 0px 6px;
+    text-indent: 10px;
+    overflow: hidden;
+    border-radius: 5px
+}
+
+.info .t1 {
+    background: var(--Sub-Dark);
+    color: var(--Main);
+    border-radius: 10px 0 0 10px;
+    border: 1px solid var(--Secondary-Light);
+    width: 100px;
+    vertical-align: top;
+    text-transform: capitalize;
+}
+
+.info .t2 {
+    padding: 15px;
+    background: var(--Main-Light);
+    font-family: comfortaa;
+}
+
+.info b {
+    color: var(--Main);
+    font-size: 18px
 }
 
 /*TriBurst*/
