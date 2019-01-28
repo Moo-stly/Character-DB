@@ -1,0 +1,28 @@
+/*TriBurst*/
+#Tris {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.s1, .s2, .s3, .s4 {
+    position: absolute;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.s1 {
+    color: var(--Main);
+}
+
+.s2 {
+    color: var(--Main-Light);
+}
+
+.s3 {
+    color: var(--Secondary-Light);
+}
+
+.s4 {
+    color: var(--Secondary-Dark);
+}
