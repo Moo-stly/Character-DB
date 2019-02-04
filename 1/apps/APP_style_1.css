@@ -107,14 +107,13 @@
  }
 
  .info h5 {
-     font-weight: lighter;
-     font-size: 15px
+     font-size: 20px
  }
 
  .info .t2 {
      border-left: 5px double var(--Sub-Dark);
-     font-family: 'Thasadith', sans-serif;
-     font-weight: bold
+     font-family: 'Thasadith', 'M PLUS Rounded 1c', sans-serif;
+     font-size: 18px
  }
 
  .info tr:nth-child(even) .t2 {
